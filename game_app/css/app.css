@@ -1,0 +1,43 @@
+body {
+    background-color: #0a2c4e;
+    color: #ffffff;
+}
+
+.map {
+    width: 500px;
+    height: 518px;
+    border: 1px solid #e9ce54;
+    margin-left: 26px;
+    margin-top: 50px;
+
+}
+
+.map .sq {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #777a7e;
+    float: left;
+}
+.map .ship {
+    background-color: #f7ec1e;
+}
+.upper-num {
+    border: 1px solid #cccccc;
+}
+.numbers {
+    display: inline-block;
+    padding-left: 4px;
+    width: 42px;
+    height: 16px;
+    color: #ffffff;
+}
+.letters-box {
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.letters {
+    width: 14px;
+    height: 50px;
+    color: #ffffff;
+}
