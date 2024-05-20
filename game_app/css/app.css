@@ -41,3 +41,16 @@ body {
     height: 50px;
     color: #ffffff;
 }
+
+.map .hit {
+    background-image: url(../i/hit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.map .miss {
+    background-image: url(../i/miss.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+

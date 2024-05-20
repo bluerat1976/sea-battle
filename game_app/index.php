@@ -1,22 +1,21 @@
 
-<? //require_once 'input.php' ?>
-<? 
-    
-    require_once 'lib.php';
-//require_once 'map.php';
-    $map_data = load_map();
-    $map = $map_data['map'];
-    $letter = $map_data['letter'];
-    $num_index = $map_data['num_index'];
-    //save_map($map);
-    $coords = get_coords($_GET);
-    $map = shoot($map, $coords);
-    //header('Location: /');
-    
+<?php
+require_once 'lib.php';
+
+$map_data = load_map('map');
+$map = $map_data['map'];
+$letter = $map_data['letter'];
+$num_index = $map_data['num_index'];
+
+$map_state_data = load_map('map_state');
+$map_state = $map_state_data['map'];
+
+$coords = get_coords($_GET);
+if ($coords) {
+    $map_state = shoot($map_state, $coords);
+    save_map($map_state, $letter, $num_index, 'map_state');
+}
 ?>
-
- <? //require_once 'template.php'?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +28,7 @@
 <body>
     <h1>Sea Battle Game</h1>
     <div class="container">
-        <?= render_map($map, $letter, $num_index) ?>
+        <?= render_map($map, $letter, $num_index, $map_state) ?>
     </div>
 </body>
 </html>
-<?= save_map($map, $letter, $num_index); ?>
