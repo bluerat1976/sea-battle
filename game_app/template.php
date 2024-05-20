@@ -1,7 +1,5 @@
 <!---- RENDER---->
 
-    
-
     <div class="letters-box">
     <? 
         for($li = 0; $li <10; $li++) {

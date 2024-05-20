@@ -26,8 +26,8 @@ body {
 }
 .numbers {
     display: inline-block;
-    padding-left: 4px;
-    width: 42px;
+    padding-left: 6px;
+    width: 44px;
     height: 16px;
     color: #ffffff;
 }
