@@ -1,0 +1,1 @@
+[{"username":"playerA","password":"123"},{"username":"playerB","password":"123"},{"username":"playerC","password":"123"},{"username":"playera-B","password":"123"}]

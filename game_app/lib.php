@@ -82,3 +82,41 @@ function load_map($map_name) {
         'num_index' => range(1, 10)
     );
 }
+
+function load_users() {
+    return json_decode(file_get_contents("./data/users.json"), true);
+};
+
+function save_users($users) {
+    file_put_contents("./data/users.php", json_encode($users));
+}
+
+// function user_exist($users, $username, $password ) {
+//     $found = false;
+//     for ($i=0; $i < count($users); $i++) { 
+//         if ($users[$i]['username'] == $username && $users[$i]['password']) {
+//             $found = true;
+//             break;
+//         }
+//     }
+//     return $found;
+// }
+
+function user_exist($users, $username, $password) {
+    $found = false;
+    $filtered_users = array_filter($users, function($user) use ($username, $password) {
+        return $user['username'] == $username && $user['password'] == $password;
+    });
+    
+    $found = !empty($filtered_users);
+    return $found;
+}
+
+
+function get_message($request) {
+    if (isset($request['message'])) {
+        $message = $request['message'];
+        return $message;
+    }
+    return false;
+}

@@ -28,7 +28,15 @@ if ($coords) {
 <body>
     <h1>Sea Battle Game</h1>
     <div class="container">
-        <?= render_map($map, $letter, $num_index, $map_state) ?>
+        <table class="navbar">
+            <tr>
+                <td><h2>SEA BUTTLE</h2></td>
+                <td><a href="/match.php">New Match</a></td>
+            </tr>
+        </table>
+
+
+
     </div>
 </body>
 </html>
