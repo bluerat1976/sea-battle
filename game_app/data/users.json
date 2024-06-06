@@ -1,14 +1,1 @@
-[
-    {
-        "username": "playerA",
-        "password": "123"
-    },
-    {
-        "username": "playerB",
-        "password": "123"
-    },
-    {
-        "username": "playerC",
-        "password": "123"
-    }
-]
+[{"username":"playerA","password":"123"},{"username":"playerB","password":"123"},{"username":"playerC","password":"123"},{"username":"Tania","password":"321"},{"username":"Tatiana","password":"4321"}]

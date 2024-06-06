@@ -88,7 +88,7 @@ function load_users() {
 };
 
 function save_users($users) {
-    file_put_contents("./data/users.php", json_encode($users));
+    file_put_contents("./data/users.json", json_encode($users));
 }
 
 // function user_exist($users, $username, $password ) {
